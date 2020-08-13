@@ -15,4 +15,20 @@ export default class launchsuccess {
             alert(error);
         }
     }
+
+    parseLaunch()
+    {
+        const success = ["true","false"];
+                    
+        const filteredsuccess = success.filter((value,i) => {
+               const searchTextMatch = value.text.includes(success[i]);
+                                       
+               return searchTextMatch;
+            });
+    
+            res.data=filteredsuccess;   
+            
+    }
+    
+    
 }

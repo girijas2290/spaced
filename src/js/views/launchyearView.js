@@ -2,39 +2,10 @@ import { elements } from './base';
 
 export const getInput = () => elements.space_btn.value;
 
-
-// // Toggle the completed value for a given year
-// const toggleyear = (id) => {
-//     const year = res.data.find((launch_year) => lauch_year.id === id)
-
-//     if (year>0) {
-//         return true;
-//     }
-// }
-
-// // Render application todos based on filters
-// const renderlaunchyear = (years, filters) => {
-//     const filteredyears = years.filter((year) => {
-//         const searchTextMatch = year.text.includes(filters.searchText);
-//         const hideCompletedMatch = !filters;
-        
-//         return searchTextMatch && hideCompletedMatch;
-//     })
-
-    
-//     document.querySelector('#todos').innerHTML = ''
-//     document.querySelector('#todos').appendChild(generateSummaryDOM(incompleteTodos))
-
-//     filteredTodos.forEach((todo) => {
-//         document.querySelector('#todos').appendChild(generateTodoDOM(todo))
-//     })
-// }
-
-
 const filterSelection=id=> {
   let element, i;
         element= document.getElementsByClassName("space_btn");
-        if (id===2006) 
+        if (id===element.value) 
             element = "";
         // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
         for (i = 0; i < element.length; i++) {
